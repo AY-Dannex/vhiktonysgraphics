@@ -1,6 +1,8 @@
 let navMenu = document.getElementById("navmenu")
 let hambugger = document.querySelector(".hambugger")
 let navContainer = document.querySelector("nav")
+let year = document.querySelector(".year")
+
 
 const actionBtn = document.querySelectorAll(".action-btn button")
 const filterCard = document.querySelectorAll(".cardContainer .card")
@@ -29,5 +31,7 @@ const filterCards = e => {
         }
     }) 
 }
+
+year.textContent = new Date().getFullYear()
 
 actionBtn.forEach(button => button.addEventListener("click", filterCards))
